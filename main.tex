@@ -72,7 +72,7 @@
                     \includegraphics[width=2.9cm]{images/louis.jpg}
                 \end{center}
                 \begin{itemize}
-                    \item 2ème année
+                    \item Doctorant 2ème année
                     \item Recherche opérationnelle
                 \end{itemize}
             \end{block}
@@ -85,10 +85,10 @@
             \begin{block}{\centering Bastien}
                 \vspace{0.4em}
                 \begin{center}
-                    \includegraphics[width=4.5cm,angle = 270]{images/bastien.jpeg}
+                    \includegraphics[width=4cm,angle = 270]{images/bastien.jpeg}
                 \end{center}
                 \begin{itemize}
-                    \item 2ème année
+                    \item Doctorant 2ème année
                     \item Optimisation
                 \end{itemize}
             \end{block}
@@ -252,7 +252,7 @@
                 
                 \only<2->{\addplot[mark=*, mark size=  4pt, color=MediumRed]
                     coordinates {(200, 0.4)}
-                    node[above, font=\small, color=MediumRed] {minimum !};}
+                    node[above,yshift=4pt, font=\small, color=MediumRed] {Minimum !};}
                 \end{axis}
             \end{tikzpicture}
         \end{column}
@@ -357,7 +357,7 @@
                 
                 \addplot[mark=*, mark size=  4pt, color=MediumRed]
                     coordinates {(18, 30420)}
-                    node[above right, font=\small, color=MediumRed] {maximum !};}
+                    node[above right, font=\small, color=MediumRed] {Maximum atteint en $p=18$!};}
 
                     
                 \end{axis}
@@ -373,7 +373,7 @@
             \begin{figure}
                 \centering
                 \includegraphics[width=0.8\linewidth]{optimlandscape.jpg}
-                \caption*{Plusieur paramètres (latitude \& longitude)}
+                \caption*{Plusieurs paramètres (latitude \& longitude)}
             \end{figure}
         \end{column}
         \begin{column}{0.42\textwidth}
@@ -465,10 +465,10 @@
             \begin{alertblock}{Problème}
                 On ne peut \textbf{pas} mesurer la pente.
             \end{alertblock}
-
+            \onslide<2->{
             \begin{exampleblock}{Stratégie}
                 Regarder à droite, à gauche de l'endroit sondé.
-            \end{exampleblock}
+            \end{exampleblock}}
         \end{column}
         \begin{column}{0.47\textwidth}
             \centering
