@@ -1,0 +1,35 @@
+                \begin{axis}[
+                    width=6.5cm, height=5.5cm,
+                    xmin=-3.2, xmax=3.2, ymin=-0.2, ymax=6,
+                    axis lines=left,
+                    tick style={draw=none},
+                    xtick=\empty, ytick=\empty,
+                    xlabel={$x$}, ylabel={$f(x)$},
+                    label style={font=\small},
+                ]
+                \addplot[thick, color=MediumBlue, domain=-3:3, samples=100]
+                    {0.6*x^2 + 0.3};
+                % Points de la descente
+                \only<1->{
+                \addplot[mark=*, mark size=4.5pt, color=MediumRed]
+                    coordinates {(-2.7, 4.67)};
+                \node[color=MediumRed, font=\scriptsize]
+                    at (axis cs:-2.3, 5.3) {départ};}
+                \only<2->{
+                \draw[->, thick, color=MediumRed!80]
+                    (axis cs:-2.7, 4.67) -- (axis cs:-1.8, 2.25);
+                \addplot[mark=*, mark size=4pt, color=orange]
+                    coordinates {(-1.7, 2.03)};}
+                \only<3->{    
+                \draw[->, thick, color=orange!90]
+                    (axis cs:-1.7, 2.03) -- (axis cs:-0.8, 0.7);
+                \addplot[mark=*, mark size=3.5pt, color=MediumGreen]
+                    coordinates {(-0.7, 0.59)};}
+                \only<4->{
+                \draw[->, thick, color=MediumGreen!80]
+                    (axis cs:-0.7, 0.59) -- (axis cs:-0.1, 0.35);
+                \addplot[mark=*, mark size=3.5pt, color=MediumGreen]
+                    coordinates {(0, 0.3)};
+                \node[color=MediumGreen, font=\scriptsize]
+                    at (axis cs:1.1, 0.2) {arrivée !};}
+                \end{axis}

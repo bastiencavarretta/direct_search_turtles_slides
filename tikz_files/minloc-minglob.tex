@@ -1,0 +1,25 @@
+\begin{axis}[
+                    width=7cm, height=7cm,
+                    xlabel={$x$},
+                    ylabel={$f(x)$},
+                    xmin=0, xmax=15,
+                    ymin=-3, ymax=4,
+                    axis lines=left,
+                    grid=major, grid style={gray!25},
+                    tick style={draw=none},
+                    label style={font=\footnotesize},
+                    tick label style={font=\tiny},
+                    xtick={0,2,4,6,8,10,12,14},
+                    ytick={-2,-1,0,1,2,3},
+                ]
+                \addplot[very thick, color=MediumBlue, domain=0:15, samples=200]
+                    {sin(deg(x)) + 0.4*sin(deg(2.5*x)) - 0.15*x + 1.5};
+                % local min ~x=4.7
+                \addplot[mark=*, mark size=2.5pt, color=orange]
+                    coordinates {(4.55, -0.5)}
+                    node[below, font=\tiny, color=orange] {minimum ?};
+                % global min ~x=8.2
+                \addplot[mark=*, mark size=3.5pt, color=MediumRed]
+                    coordinates {(11.7, -1.35)}
+                    node[below, font=\small, color=MediumRed] {vrai minimum !};
+\end{axis}
